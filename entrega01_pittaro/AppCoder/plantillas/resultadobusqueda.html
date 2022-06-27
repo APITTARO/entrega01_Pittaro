@@ -1,0 +1,25 @@
+{% extends "C:\\Users\\agus-\\Desktop\\python\\django\\nuevo_proyecto\\entrega01_pittaro\\AppCoder\\plantillas\\padre.html" %}
+{% load static %}
+{% block ContendioQueCambia %}
+
+<h3> Busca en la base de datos </h3>
+    <form action="/AppCoder/buscar" method="GET">
+    <input type="text" name="nombre" id="nombre">
+
+    <input type="submit" value="Buscar">
+
+    </form>
+
+    {% if familiares %}
+    <p>Estamos buscando: {{nombre}}</p>
+    
+    <ul>
+        {% for familiar in familiares %}
+            <li>{{Familiar.nombre}}</li>
+            <li>{{Familiar.telefono}}</li>
+            <li>{{Familiar.fechaNacimiento}}</li>
+        {% endfor %}
+    </ul>
+    {% endif %}
+
+{% endblock %}
