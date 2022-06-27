@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Entrega 01</title>
+</head>
+<body style="color:antiquewhite">
+    <h1>FAMILIARES</h1>
+    <div class="familiares">
+        <h3>Datos Básicos</h3>
+        {%for n in familiares%}
+
+        {{n.nombre} Telefono: {n.telefono} Fecha de Nacimiento: {n.fechaNacimiento} }
+        <br>
+
+        {% endfor %}
+        
+    </div>
+
+    <div class="tipo_familiares">
+        <h3>Parentezcos</h3>
+        {%for n in tipo_familiares%}
+
+        {Apellido: {n.apellido} Parentezco: {n.parentezco} }
+        <br>
+
+        {% endfor %}
+        
+    </div>
+    <div class="hijos">
+        <h3>Familiares Cercanos</h3>
+        {%for n in hijos%}
+
+        {Padre: {n.padre} Madre: {n.madre}  Cantidad de Hermanos: {n.cant_hermanos}}
+        <br>
+
+        {% endfor %}
+        
+    </div>
+</body>
+</html>
